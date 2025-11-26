@@ -1,6 +1,6 @@
 
 # First Order Motion Model for Image Animation
-This repository contains the source code for a deep learning–based Image Animation Model that transfers motion from a driving video to a static image.
+ This repository contains the source code for a deep learning–based Image Animation Model that transfers motion from a driving video to a static image.
 
 [Hugging Face Spaces](https://huggingface.co/spaces/)
 
@@ -165,6 +165,7 @@ We recommend the later, for each video make a separate folder with all the frame
 
 
 "# Real-Time-Image-Animation" 
+
 
 
 
