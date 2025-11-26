@@ -28,8 +28,7 @@ pip install -r requirements.txt
 There are several configuration (```config/dataset_name.yaml```) files one for each `dataset`. See ```config/taichi-256.yaml``` to get description of each parameter.
 
 
-### Pre-trained checkpoint
-Checkpoints can be found under following link: [google-drive](https://drive.google.com/open?id=1PyQJmkdCsAkOYwUyaj_l-l0as-iLDgeH) or [yandex-disk](https://yadi.sk/d/lEw8uRm140L_eQ).
+
 
 ### Animation Demo
 To run a demo, download checkpoint and run the following command:
@@ -78,14 +77,14 @@ docker run -it --rm --gpus all \
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb) [![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb)
 
-@graphemecluster prepared a GUI demo for the Google Colab. It also works in Kaggle. For the source code, see [```demo.ipynb```](https://github.com/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb).
+A GUI demo is available inside demo.ipynb.
 
-For the old demo, see [```old_demo.ipynb```](https://github.com/AliaksandrSiarohin/first-order-model/blob/master/old_demo.ipynb).
+
 
 ### Face-swap
 It is possible to modify the method to perform face-swap using supervised segmentation masks.
 ![Screenshot](sup-mat/face-swap.gif)
-For both unsupervised and supervised video editing, such as face-swap, please refer to [Motion Co-Segmentation](https://github.com/AliaksandrSiarohin/motion-cosegmentation).
+
 
 
 ### Training
@@ -148,12 +147,11 @@ that the object in the first frame of the video and in the source image have the
 
 3) **Fashion**. Follow the instruction on dataset downloading [from](https://vision.cs.ubc.ca/datasets/fashion/).
 
-4) **Taichi**. Follow the instructions in [data/taichi-loading](data/taichi-loading/README.md) or instructions from https://github.com/AliaksandrSiarohin/video-preprocessing. 
+4) **Taichi**. Follow the instructions in [data/taichi-loading](data/taichi-loading/README.md) 
 
-5) **Nemo**. Please follow the [instructions](https://www.uva-nemo.org/) on how to download the dataset. Then the dataset should be preprocessed using scripts from https://github.com/AliaksandrSiarohin/video-preprocessing.
+5) **Nemo**.
  
-6) **VoxCeleb**. Please follow the instruction from https://github.com/AliaksandrSiarohin/video-preprocessing.
-
+6) **VoxCeleb**.
 
 ### Training on your own dataset
 1) Resize all the videos to the same size e.g 256x256, the videos can be in '.gif', '.mp4' or folder with images.
@@ -163,18 +161,9 @@ We recommend the later, for each video make a separate folder with all the frame
 
 3) Create a config ```config/dataset_name.yaml```, in dataset_params specify the root dir the ```root_dir:  data/dataset_name```. Also adjust the number of epoch in train_params.
 
-#### Additional notes
 
-Citation:
 
-```
-@InProceedings{Siarohin_2019_NeurIPS,
-  author={Siarohin, Aliaksandr and Lathuilière, Stéphane and Tulyakov, Sergey and Ricci, Elisa and Sebe, Nicu},
-  title={First Order Motion Model for Image Animation},
-  booktitle = {Conference on Neural Information Processing Systems (NeurIPS)},
-  month = {December},
-  year = {2019}
-}
-```
+
 "# Real-Time-Image-Animation" 
+
 
