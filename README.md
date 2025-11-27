@@ -22,11 +22,6 @@ interactive, providing a more engaging experience for users.
 
 
 
-### Colab Demo 
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb)
-
-A GUI demo is available inside demo.ipynb.
 
 
 
@@ -102,6 +97,7 @@ testament to the power of integrating diverse technological components into a
 cohesive and user-centric application. It paves the way for new creative
 possibilities, inspiring users to reimagine the boundaries of static imagery and
 explore new dimensions of animated art and storytelling.
+
 
 
 
