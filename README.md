@@ -2,33 +2,6 @@
 # First Order Motion Model for Image Animation
  This repository contains the source code for a deep learning–based Image Animation Model that transfers motion from a driving video to a static image.
 
-[Hugging Face Spaces](https://huggingface.co/spaces/)
-
-## Example animations
-
-The videos on the left show the driving videos. The first row on the right for each dataset shows the source videos. The bottom row contains the animated sequences with motion transferred from the driving video and object taken from the source image. We trained a separate network for each task.
-
-### VoxCeleb Dataset
-![Screenshot](sup-mat/vox-teaser.gif)
-### Fashion Dataset
-![Screenshot](sup-mat/fashion-teaser.gif)
-### MGIF Dataset
-![Screenshot](sup-mat/mgif-teaser.gif)
-
-
-### Installation
-
-We support ```python3```. To install the dependencies run:
-```
-pip install -r requirements.txt
-```
-
-### YAML configs
-
-There are several configuration (```config/dataset_name.yaml```) files one for each `dataset`. See ```config/taichi-256.yaml``` to get description of each parameter.
-
-
-
 
 ### Animation Demo
 To run a demo, download checkpoint and run the following command:
@@ -45,33 +18,6 @@ pip install -r requirements.txt
 python setup.py install
 ```
 
-### Animation demo with Docker
-
-If you are having trouble getting the demo to work because of library compatibility issues,
-and you're running Linux, you might try running it inside a Docker container, which would
-give you better control over the execution environment.
-
-Requirements: Docker 19.03+ and [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
-installed and able to successfully run the `nvidia-docker` usage tests.
-
-We'll first build the container.
-
-```
-docker build -t first-order-model .
-```
-
-And now that we have the container available locally, we can use it to run the demo.
-
-```
-docker run -it --rm --gpus all \
-       -v $HOME/first-order-model:/app first-order-model \
-       python3 demo.py --config config/vox-256.yaml \
-           --driving_video driving.mp4 \
-           --source_image source.png  \ 
-           --checkpoint vox-cpk.pth.tar \ 
-           --result_video result.mp4 \
-           --relative --adapt_scale
-```
 
 ### Colab Demo 
 
@@ -98,16 +44,6 @@ Checkpoints will be saved to this folder.
 To check the loss values during training see ```log.txt```.
 You can also check training data reconstructions in the ```train-vis``` subfolder.
 By default the batch size is tuned to run on 2 or 4 Titan-X gpu (apart from speed it does not make much difference). You can change the batch size in the train_params in corresponding ```.yaml``` file.
-
-### Evaluation on video reconstruction
-
-To evaluate the reconstruction performance run:
-```
-CUDA_VISIBLE_DEVICES=0 python run.py --config config/dataset_name.yaml --mode reconstruction --checkpoint path/to/checkpoint
-```
-You will need to specify the path to the checkpoint,
-the ```reconstruction``` subfolder will be created in the checkpoint folder.
-The generated video will be stored to this folder, also generated videos will be stored in ```png``` subfolder in loss-less '.png' format for evaluation.
 
 
 ### Image animation
@@ -141,13 +77,12 @@ that the object in the first frame of the video and in the source image have the
 
 ### Datasets
 
-1) **Bair**. This dataset can be directly [downloaded](https://yadi.sk/d/Rr-fjn-PdmmqeA).
+1) **Bair**.
+2) **Mgif**. 
 
-2) **Mgif**. This dataset can be directly [downloaded](https://yadi.sk/d/5VdqLARizmnj3Q).
+3) **Fashion**. 
 
-3) **Fashion**. Follow the instruction on dataset downloading [from](https://vision.cs.ubc.ca/datasets/fashion/).
-
-4) **Taichi**. Follow the instructions in [data/taichi-loading](data/taichi-loading/README.md) 
+4) **Taichi**. 
 
 5) **Nemo**.
  
@@ -164,7 +99,7 @@ We recommend the later, for each video make a separate folder with all the frame
 
 
 
-"# Real-Time-Image-Animation" 
+
 
 
 
