@@ -1,6 +1,6 @@
 
 # First Order Motion Model for Image Animation
-## Introduction
+### Introduction
 Real-time image animation leverages advanced computer vision and machine
 learning techniques to animate static images using dynamic driving videos. This
 innovative technology enables the transformation of still photos into lively,
@@ -22,7 +22,7 @@ interactive, providing a more engaging experience for users.
 
 
 
-## Colab Demo 
+### Colab Demo 
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb)
 
@@ -36,17 +36,6 @@ It is possible to modify the method to perform face-swap using supervised segmen
 
 
 
-### Training
-
-To train a model on specific dataset run:
-```
-CUDA_VISIBLE_DEVICES=0,1,2,3 python run.py --config config/dataset_name.yaml --device_ids 0,1,2,3
-```
-The code will create a folder in the log directory (each run will create a time-stamped new directory).
-Checkpoints will be saved to this folder.
-To check the loss values during training see ```log.txt```.
-You can also check training data reconstructions in the ```train-vis``` subfolder.
-By default the batch size is tuned to run on 2 or 4 Titan-X gpu (apart from speed it does not make much difference). You can change the batch size in the train_params in corresponding ```.yaml``` file.
 
 
 ### Image animation
@@ -99,7 +88,7 @@ We recommend the later, for each video make a separate folder with all the frame
 
 3) Create a config ```config/dataset_name.yaml```, in dataset_params specify the root dir the ```root_dir:  data/dataset_name```. Also adjust the number of epoch in train_params.
 
-## CONCLUSION
+### CONCLUSION
 The project underscores the versatility and accessibility of cutting-edge machine
 learning techniques. By leveraging an intuitive interface, it lowers the barrier for
 entry, allowing individuals without a deep technical background to experiment
@@ -113,6 +102,7 @@ testament to the power of integrating diverse technological components into a
 cohesive and user-centric application. It paves the way for new creative
 possibilities, inspiring users to reimagine the boundaries of static imagery and
 explore new dimensions of animated art and storytelling.
+
 
 
 
