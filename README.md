@@ -1,5 +1,5 @@
 
-# First Order Motion Model for Image Animation
+# Real time image animation
 ### Introduction
 Real-time image animation leverages advanced computer vision and machine
 learning techniques to animate static images using dynamic driving videos. This
@@ -97,6 +97,7 @@ testament to the power of integrating diverse technological components into a
 cohesive and user-centric application. It paves the way for new creative
 possibilities, inspiring users to reimagine the boundaries of static imagery and
 explore new dimensions of animated art and storytelling.
+
 
 
 
